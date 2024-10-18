@@ -4,34 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Steps</title>
+    <link  href="styles/Steps.css" rel="stylesheet" />
 </head>
 <body>
 
 
-    <h1>1. Evite el reflejo en el documento </h1>
-    <h1>2. Mantén el documento estable</h1>
-    <h1>3. Logra un buen enfoque</h1>
-    <button onclick="SetCookie()">Aceptar</button>
-    
-
-    <script>
-        const COOKIE_NAME = "ONIDCOOKIE";
-        const REDIRECT = GetParam("backUrl");
-
-
-        function SetCookie(){
-                document.cookie = `${COOKIE_NAME}=testValue; path=/; SameSite=None; Secure`; 
-                window.location.href = `${REDIRECT}?step=1`;
-      }
-
-      function GetParam(paramName){
-        const urlParams = new URLSearchParams(window.location.search);
-
-        const url = urlParams.get(paramName);
-
-        return url;
-      }
-    
-    </script>
+    <h1 id="step_1"></h1>
+    <h1 id="step_2"></h1>
+    <h1 id="step_3"></h1>
+    <button id="btnAceptar" onclick="SetCookie()"></button>
+<script src="scripts/Language.js"></script>
+<script src="scripts/Steps.js"></script>
 </body>
 </html>
