@@ -6,9 +6,9 @@ var Messages = {
     "PermissionBtn": "Accept cookies",
     "Accept": "Accept",
     "Steps": [
-      "1. Avoid glare on the document",
-      "2. Keep the document steady",
-      "3. Achieve a good focus"
+      "Avoid glare on the document",
+      "Keep the document steady",
+      "Achieve a good focus"
     ]
   },
     "es": {
@@ -16,7 +16,7 @@ var Messages = {
       "PermissionBody":"Este sitio utiliza cookies para mejorar su experiencia. Acepte el uso de cookies para continuar.",
       "PermissionBtn":"Aceptar cookies",
       "Accept":"Aceptar",
-      "Steps": ["1. Evite el reflejo en el documento ", "2. Mantén el documento estable", "3. Logra un buen enfoque"]
+      "Steps": ["Evite el reflejo en el documento ", "Mantén el documento estable", "Logra un buen enfoque"]
     
     }
   }
