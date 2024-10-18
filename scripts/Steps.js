@@ -6,6 +6,14 @@ SetValues();
 }
 
 function SetValues(){
+
+
+    var name = GetParam("name") ?? "ONID";
+    var logo = GetParam("imageUrl") ?? "https://onid.es/wp-content/uploads/2023/05/LogoOnID-1.png";
+
+    document.getElementById("imgLogo").src = logo;
+    document.getElementById("TitleName").innerHTML = name;
+
     var values = GetText();
 
     var contador = 1;
