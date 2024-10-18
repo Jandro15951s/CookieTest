@@ -301,7 +301,7 @@
                             SendMessage(REDIRECT_STEP)
                         } else {
                             // Si la cookie existe, mostramos el modal para aceptar el storage
-                            ShowModal();
+                            ShowModal(1);
 
                         }
 
@@ -323,17 +323,24 @@
             return url;
         }
 
-        function ShowModal() {
+        function ShowModal(show) {
             var modal = document.getElementById("cookieModal");
             var loader = document.getElementById("loader");
 
-            modal.style.display = "block";
-            loader.style.display ="none";
+            if(!show){
+                modal.style.display = "block";
+                loader.style.display ="none";
+            }else{
+                modal.style.display = "none";
+                loader.style.display ="block";
+            }
+       
 
         }
 
 
         document.getElementById('acceptCookies').addEventListener('click', function () {
+            ShowModal(0);
             document.requestStorageAccess().then(
                 function () {
                     SendMessage(OK)
