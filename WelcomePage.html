@@ -67,6 +67,7 @@ HasPermission();
             if (hasAccess) {
 
               // Si se tiene acceso al storage se redirecciona al web component con normalidad
+                SendMessage(GetOS());
               SendMessage("ok")
             } else {
                 SendMessage(STEP);
@@ -145,6 +146,25 @@ HasPermission();
             function SendMessage(messagePost){
               window.parent.postMessage({ message: messagePost }, "*");
             }
+
+ function GetOS() {
+  const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
+
+  // Detectar dispositivos iOS (iPhone, iPad, iPod)
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    return "iOS";
+  }
+
+  // Detectar macOS
+  if (navigator.platform.indexOf('Mac') > -1) {
+    return "macOS";
+  }
+
+  return "Otro";
+}
+
+
+
          
       
         
