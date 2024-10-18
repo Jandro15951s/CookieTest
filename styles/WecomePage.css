@@ -19,25 +19,7 @@
     text-align: center;
 }
 
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
 
-button:hover {
-    background-color: #45a049;
-}
-
-.flex-center{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 
 .loading {
